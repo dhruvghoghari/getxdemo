@@ -18,22 +18,6 @@ class MyControlar extends GetxController
   getAllProducts() async {
     try
     {
-
-      // var id = 10;
-      // var params = {
-      //   "limit": id.toString(),
-      // };
-      //
-      // var headers = {
-      //   "Postman-Token": "<calculated when request is sent>",
-      //   "Host": "<calculated when request is sent>",
-      //   "User-Agent": "PostmanRuntime/7.33.0",
-      //   "Accept": "*/*",
-      //   "Accept-Encoding": "gzip, deflate, br",
-      //   "Connection": "keep-alive",
-      // };
-
-
       await ApiHandler.getRequest(UrlResources.BASE_URL).then((json){
         alldata!.value = json.map<product>((obj) => product.fromJson(obj)).toList();
       });

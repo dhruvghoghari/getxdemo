@@ -5,8 +5,6 @@ import '../controlar/MyControlar.dart';
 
 class ViewAllData extends StatelessWidget {
 
-
-
   @override
   Widget build(BuildContext context) {
     MyControlar obj = Get.put(MyControlar());
@@ -33,11 +31,8 @@ class ViewAllData extends StatelessWidget {
           actions: [
             ElevatedButton(
               onPressed: () async {
-
-
                 await obj.addProduct();
                 Navigator.of(context).pop();
-
               },
               child: Text("Add",style: TextStyle(color: Colors.white),),
               style: ButtonStyle(
